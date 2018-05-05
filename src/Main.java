@@ -1,45 +1,41 @@
 public class Main {
 
     public static void main(String[] args) {
-        int number = 4;
-        System.out.println( "Sum of 1 to " + number + "is: " + sumSeries(number));
-        System.out.println( "The factorial of " + number + "is: " + factorial(number));
-        int base = 2;
-        System.out.println( number + " to " + base + "is: " + power(base,number));
+
+        int nmber = 4;
+
+        System.out.println(sum(nmber));
+
+        System.out.println(factorial(nmber));
+
+        System.out.println(power(2,3));
+
+
     }
 
+    public static int sum(int nmbr){
 
-    public static int sumSeries(int n){
-        //stop case
-        if (n==1){
-            return 1;
-        }
-        //recursion case
-        else{
-            return n + sumSeries(n-1);
-        }
+        if (nmbr==1) return 1;
+
+        return nmbr + sum(nmbr-1);
+
+
     }
 
-    public static int factorial(int n){
-        //stop case
-        if (n==1){
-            return 1;
-        }
-        //recursion case
-        else{
-            return n * factorial(n-1);
-        }
+    public static int factorial(int nmbr){
+
+        if (nmbr==1) return 1;
+
+        return nmbr * factorial(nmbr-1);
+
     }
 
-    public static int power(int base, int exponent){
-        //stop case
-        if (exponent==1){
-            return base;
-        }
-        //recursion case
-        else{
-            return base * power(base, exponent-1);
-        }
+    public static int power(int nmbr, int xpnt){
+
+        if (xpnt==1) return nmbr;
+
+        return nmbr * power(nmbr, xpnt-1);
+
     }
 
 }
